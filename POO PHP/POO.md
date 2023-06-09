@@ -64,3 +64,52 @@ Constructor: es un método especial dentro de una clase que se invoca automátic
         }
     }
 ```
+
+## Programación Orientada a Objetos POO III. Vídeo 24
+
+Cómo instanciamos nuestros Objetos con sus métodos?
+
+```php
+
+    include "vehiculo.php";
+
+    // Generamos nuestras instancias
+    $ferrari = new Coche("rojo ferrari", "Ferrari", "La Ferrari");
+    // $mazda = new Coche("rojo mazda", "Mazda", "A3");
+    // $datsun = new Coche("azul", "Datsun", "68 bluebird");
+
+    // Impirmimos los métodos de nuestras instancias
+    $ferrari->arrancar();
+    // $mazda->girar();
+    // $datsun->frenar();
+    // echo $datsun->ruedas;
+
+    // Métodos setters y getters
+    $ferrari->setMotor("1.6 cilindros");
+    // $mazda->setMotor("1.2 cilindros");
+    // $datsun->setMotor("1.4 cilindros");
+
+    $ferrari->getColor();
+    // $mazda->getColor();
+    // $datsun->getColor();
+
+
+    $optimus = new Camion("Azul y rojo", "Mercedes Benz", "Freightliner");
+
+    $optimus->getColor();
+```
+
+## Programación Orientada a Objetos POO IV. Herencia. Vídeo 25
+
+La herencia es un concepto fundamental en la programación orientada a objetos (POO) que permite crear nuevas clases basadas en clases existentes. Es un mecanismo que permite a una clase adquirir las propiedades (atributos) y comportamientos (métodos) de otra clase, estableciendo una relación jerárquica entre ellas.
+
+En POO, la clase existente se denomina "clase padre" o "superclase", y la nueva clase creada se denomina "clase hija" o "subclase". La clase hija hereda todos los atributos y métodos de la clase padre, y además puede agregar nuevos atributos y métodos, modificar los existentes o incluso definir sus propios métodos especializados.
+
+La herencia proporciona varios beneficios, entre ellos:
+
+Reutilización de código: Al heredar propiedades y métodos de una clase padre, la clase hija puede aprovechar y reutilizar el código existente, evitando la duplicación y mejorando la eficiencia.
+
+Abstracción y generalización: La herencia permite establecer una relación de generalización y especialización entre las clases. La clase padre puede representar una entidad más general, mientras que las clases hijas pueden representar entidades más específicas con características adicionales o modificaciones.
+
+Polimorfismo: Las clases hijas pueden proporcionar implementaciones específicas de los métodos heredados de la clase padre, lo que permite el polimorfismo. Esto significa que se pueden invocar los mismos métodos de diferentes objetos, pero ejecutarán comportamientos diferentes según la clase a la que pertenezcan.
+

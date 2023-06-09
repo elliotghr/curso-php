@@ -10,55 +10,32 @@
 
 <body>
     <?php
+    include "vehiculo.php";
 
-    // Creamos una clase Coche
-    // La primera letra debe ser mayuscula
-    class Coche
-    {
-        // Propiedades
-        private $marca;
-        private $modelo;
-        private $color;
-        var $ruedas;
-        private $motor;
-        private $velocidad;
-
-        // Constructor -> Estado Inicial -> el método puede definirse como __construct o el nombre de la clase
-        public function __construct()
-        {
-            $this->velocidad = 0;
-            $this->motor;
-            $this->ruedas = 4;
-            $this->color;
-            $this->modelo;
-            $this->marca;
-        }
-
-        // Metodos
-        function arrancar()
-        {
-            echo "Estoy arrancando <br>";
-        }
-        function girar()
-        {
-            echo "Estoy girando <br>";
-        }
-        function frenar()
-        {
-            echo "Estoy frenando <br>";
-        }
-    }
     // Generamos nuestras instancias
-    $ferrari = new Coche();
-    $mazda = new Coche();
-    $datsun = new Coche();
+    $ferrari = new Coche("rojo ferrari", "Ferrari", "La Ferrari");
+    // $mazda = new Coche("rojo mazda", "Mazda", "A3");
+    // $datsun = new Coche("azul", "Datsun", "68 bluebird");
 
     // Impirmimos los métodos de nuestras instancias
-    echo $ferrari->arrancar();
-    echo $mazda->girar();
-    echo $datsun->frenar();
-    echo $datsun->ruedas;
+    $ferrari->arrancar();
+    // $mazda->girar();
+    // $datsun->frenar();
+    // echo $datsun->ruedas;
 
+    // Métodos setters y getters
+    $ferrari->setMotor("1.6 cilindros");
+    // $mazda->setMotor("1.2 cilindros");
+    // $datsun->setMotor("1.4 cilindros");
+
+    $ferrari->getColor();
+    // $mazda->getColor();
+    // $datsun->getColor();
+
+
+    $optimus = new Camion("Azul y rojo", "Mercedes Benz", "Freightliner");
+
+    $optimus->getColor();
     ?>
 </body>
 
