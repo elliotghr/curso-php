@@ -13,9 +13,13 @@
     include "Concesionario.php";
     // Accediendo y manipulando a un campo estatico
     // (El cual es un problema por la encapsulación que debe tener)
-    
-    Compra_vehiculo::$ayuda = 20000;
+    // Compra_vehiculo::$ayuda = 20000;
+
     $compra_Antonio = new Compra_vehiculo("compacto");
+
+    // Aplicamos el descuento
+    Compra_vehiculo::descuento_gobierno();
+
 
     $compra_Antonio->climatizador();
     $compra_Antonio->tapiceria_cuero("blanco");
@@ -28,8 +32,6 @@
 
     $compra_Nano->climatizador();
     $compra_Nano->tapiceria_cuero("rojo");
-
-
 
     echo "$" . $compra_Nano->precio_final();
     ?>

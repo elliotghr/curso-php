@@ -4,7 +4,7 @@ class Compra_vehiculo
 
 	private $precio_base;
 	// Este campo pertenece a la clase
-	static $ayuda = 4500;
+	private static $ayuda = 0;
 
 	function __construct($gama)
 	{
@@ -40,6 +40,11 @@ class Compra_vehiculo
 			$this->precio_base += 5000;
 		}
 	} // fin tapicería
+
+	static function descuento_gobierno()
+	{
+		self::$ayuda = 4500;
+	}
 
 	function precio_final()
 	{
