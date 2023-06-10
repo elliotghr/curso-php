@@ -1,5 +1,4 @@
 <?php
-
 // Creamos una clase Coche
 // La primera letra debe ser mayuscula
 class Coche
@@ -8,15 +7,14 @@ class Coche
     private $marca;
     private $modelo;
     private $color;
-    var $ruedas;
-    private $motor;
+    protected $ruedas;
+    protected $motor;
     private $velocidad;
 
     // Constructor -> Estado Inicial -> el método puede definirse como __construct o el nombre de la clase
     public function __construct($color, $marca, $modelo)
     {
         $this->velocidad = 0;
-        $this->motor;
         $this->ruedas = 4;
         $this->color = $color;
         $this->modelo = $modelo;
@@ -37,60 +35,52 @@ class Coche
         echo "Estoy frenando <br>";
     }
     // Metodos setters y getters
-    function setMotor($motor)
+    function set_motor($motor)
     {
         $this->motor = $motor;
-        echo "El motor del $this->marca, modelo $this->modelo es $this->motor <br>";
     }
-    function getColor()
+    function get_color()
     {
         echo "El color del $this->marca, modelo $this->modelo es $this->color <br>";
+    }
+    function get_ruedas()
+    {
+        echo "El coche tiene $this->ruedas ruedas <br>";
+    }
+    function get_motor()
+    {
+        echo "El coche tiene un motor de  $this->motor <br>";
     }
 }
 
 
-class Camion
+class Camion extends Coche
 {
-    // Propiedades
-    private $marca;
-    private $modelo;
-    private $color;
-    var $ruedas;
-    private $motor;
-    private $velocidad;
-
-    // Constructor -> Estado Inicial -> el método puede definirse como __construct o el nombre de la clase
     public function __construct($color, $marca, $modelo)
     {
-        $this->velocidad = 0;
-        $this->motor;
-        $this->ruedas = 4;
-        $this->color = $color;
-        $this->modelo = $modelo;
-        $this->marca = $marca;
+        // Llamamos al método constructor del padre
+        parent::__construct($color, $marca, $modelo);
+        // Sobreescribimos el valor de ruedas
+        $this->ruedas = 8;
     }
 
-    // Metodos
+    // Sobreescritura de métodos
+    // Simplemente reescribimos el método con el mismo nombre y modificamos su contenido
+    function getRuedas()
+    {
+        echo "El camion tiene $this->ruedas ruedas <br>";
+    }
+    // parent, llamamos al método de la clase padre
+
+    // Reutilizando métodos del padre con parent::
     function arrancar()
     {
-        echo "Estoy arrancando <br>";
+        // Con parent le decimos que ejecute el método de la clase padre
+        parent::arrancar();
+        echo "Camión arrancado <br>";
     }
-    function girar()
+    function get_motor()
     {
-        echo "Estoy girando <br>";
-    }
-    function frenar()
-    {
-        echo "Estoy frenando <br>";
-    }
-    // Metodos setters y getters
-    function setMotor($motor)
-    {
-        $this->motor = $motor;
-        echo "El motor del $this->marca, modelo $this->modelo es $this->motor <br>";
-    }
-    function getColor()
-    {
-        echo "El color del $this->marca, modelo $this->modelo es $this->color <br>";
+        echo "El camion tiene un motor de  $this->motor <br>";
     }
 }

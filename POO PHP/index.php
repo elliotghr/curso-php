@@ -24,18 +24,27 @@
     // echo $datsun->ruedas;
 
     // Métodos setters y getters
-    $ferrari->setMotor("1.6 cilindros");
-    // $mazda->setMotor("1.2 cilindros");
-    // $datsun->setMotor("1.4 cilindros");
+    $ferrari->set_motor("1.6 cilindros");
+    // $mazda->set_motor("1.2 cilindros");
+    // $datsun->set_motor("1.4 cilindros");
 
-    $ferrari->getColor();
-    // $mazda->getColor();
-    // $datsun->getColor();
+    $ferrari->get_color();
+    // $mazda->get_color();
+    // $datsun->get_color();
 
 
+    $ferrari->get_ruedas();
+    // $mazda->get_color();
+    // $datsun->get_color();
     $optimus = new Camion("Azul y rojo", "Mercedes Benz", "Freightliner");
 
-    $optimus->getColor();
+    $optimus->get_color();
+    $optimus->get_ruedas();
+    $optimus->arrancar();
+
+    $ferrari->get_motor();
+    $optimus->set_motor("1.8 cilindros");
+    $optimus->get_motor();
     ?>
 </body>
 
