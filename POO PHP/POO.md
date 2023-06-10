@@ -274,3 +274,10 @@ $objeto->metodoPrivado(); // ERROR: Acceso inválido desde contexto externo
 ```
 
 Los modificadores de acceso permiten controlar el nivel de encapsulación de los miembros de una clase, determinando qué partes del código pueden acceder a ellos. Esto es fundamental para garantizar la integridad de los datos y promover una estructura coherente y segura en el diseño de software orientado a objetos.
+
+## Orientada a Objetos POO VII. Variables y métodos estáticos. Vídeo 28
+
+Cuando tenemos una clase con métodos y campos e instanciamos uno o más objetos, estos objetos crean una copia de esos mismos métodos y campos (cada uno tiene su propia copia) y se puede comportar de manera diferente
+
+Cu8ando se genera un método estatico o un campo estatico, las instancias no tendrán una copia del método, la clase tendrá este único método y lo compartirá a las instancias
+Para acceder a nuestros metodos estaticos o campos estaticos necesitamos usar self::
