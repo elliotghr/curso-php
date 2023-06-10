@@ -40,3 +40,11 @@ Explicando cada parte:
 - PDO::ERRMODE_EXCEPTION: Es otra constante predefinida en la clase PDO que representa el modo de manejo de errores llamado "EXCEPTION" (excepción). Este modo configura PDO para que lance excepciones cuando se produzca un error en lugar de emitir advertencias o errores simples.
 
 En resumen, la línea de código que mencionas configura la instancia de la clase PDO para que lance excepciones cuando ocurran errores, lo que facilita el manejo y la detección de problemas en la comunicación con la base de datos. Esto permite capturar y manejar los errores de manera más precisa y controlada en el código.
+
+## Curso PHP MySql. Modelo Vista Controlador II. Vídeo 79
+
+Comenzamos con los modelos, creamos un modelo que genere la conexion a la DB y otro archivo que obtenga los datos de nuestra tabla
+
+## Curso PHP MySql. Modelo Vista Controlador III. Vídeo 80
+
+Seguimos con la logica del controlador para instanciar nuestro Objeto del modelo, guardar los datos que nos devuelve, posteriormente pasarlos a la vista y en el index pasamos el controlador

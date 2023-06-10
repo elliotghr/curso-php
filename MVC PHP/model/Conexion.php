@@ -12,7 +12,7 @@ class Conectar
             // Configuramos el manejo de excpeciones y errores para facilitar el manejo y la detección de problemas en la comunicación con la base de datos
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $conexion->exec("SER CHARACTER SET UTF8");
+            // $conexion->exec("SER CHARACTER SET UTF8");
         } catch (\Throwable $th) {
             // Si al falla detenemos el script e imprimimos los mensajes de error y lineas de error
             die('Error' . $th->getMessage());
