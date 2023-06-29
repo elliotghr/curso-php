@@ -318,7 +318,9 @@ $array = [1, 2, 3];
 $array[1]++; // Aumenta en uno el valor en la posición 1 del array (2), ahora será 3
 ```
 
-## En PHP, tanto "include" como "require" se utilizan para incluir archivos en un script. Ambas instrucciones permiten la reutilización de código al incorporar contenido desde otros archivos. Sin embargo, hay algunas diferencias clave entre "include" y "require". A continuación, se detallan estas diferencias:
+## Importaciones en php
+
+En PHP, tanto "include" como "require" se utilizan para incluir archivos en un script. Ambas instrucciones permiten la reutilización de código al incorporar contenido desde otros archivos. Sin embargo, hay algunas diferencias clave entre "include" y "require". A continuación, se detallan estas diferencias:
 
 1. Comportamiento en caso de error:
 

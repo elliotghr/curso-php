@@ -284,3 +284,74 @@ Cuando se genera un método estatico o un campo estatico, las instancias no tend
 Para acceder a nuestros metodos estaticos o campos estaticos necesitamos usar self::
 Lo útil de los métodos y campos estaticos es que se comparten a todos las instancias, por tanto solo debemos hacer uso de ello con self::, nos ayuda a no reescribir código
 ![](./assets/2.png)
+
+## EXTRA
+
+## Named parameters
+
+Los named parameters (parámetros con nombre) son una característica de algunos lenguajes de programación que permiten pasar argumentos a una función o método utilizando sus nombres correspondientes en lugar de su posición. Esto ofrece mayor claridad y flexibilidad al llamar a una función, ya que no es necesario recordar el orden exacto de los parámetros.
+
+En lugar de pasar los argumentos en un orden fijo, con named parameters puedes proporcionar los valores utilizando el nombre del parámetro seguido de un signo igual (=). Esto permite especificar solo los parámetros necesarios y omitir los demás, ya que el orden no importa.
+
+Aquí tienes un ejemplo para ilustrar cómo se utilizan los named parameters en PHP 8.0 y versiones posteriores:
+
+```php
+function saludar($nombre, $saludo = "Hola", $puntual = false) {
+    if ($puntual) {
+        echo "$saludo, $nombre!";
+    } else {
+        echo "$saludo, $nombre.";
+    }
+}
+
+// Llamada a la función utilizando named parameters
+saludar(nombre: "Juan", saludo: "¡Hola", puntual: true);
+```
+
+En este ejemplo, la función saludar acepta tres parámetros: $nombre, $saludo (con un valor predeterminado de "Hola") y $puntual (con un valor predeterminado de false). Al llamar a la función, se utilizan los named parameters para especificar los valores deseados, sin importar el orden. Esto proporciona un código más legible y permite omitir los parámetros que tienen valores predeterminados.
+
+Los named parameters son especialmente útiles cuando una función tiene muchos parámetros opcionales o cuando se desea mejorar la legibilidad y el mantenimiento del código al llamar a funciones con múltiples argumentos.
+
+## Polimorfismo
+
+El polimorfismo es un concepto fundamental en la programación orientada a objetos (POO) que permite que objetos de diferentes clases sean tratados de manera uniforme a través de una interfaz común.
+
+En POO, el polimorfismo se basa en dos conceptos clave: herencia y la capacidad de un objeto de una clase hija de ser tratado como un objeto de la clase padre. Esto significa que una clase hija puede heredar los métodos y propiedades de su clase padre, y también puede proporcionar su propia implementación de esos métodos o incluso agregar nuevos métodos y propiedades.
+
+El polimorfismo se utiliza para permitir que objetos de diferentes clases respondan de manera diferente a un mismo método, según su implementación específica. Esto permite escribir código más genérico y reutilizable, ya que no es necesario conocer la clase exacta de un objeto para interactuar con él, sino que basta con trabajar con su interfaz común.
+
+Aquí tienes un ejemplo para ilustrar el polimorfismo en PHP:
+
+```php
+class Animal {
+    public function hacerSonido() {
+        echo "El animal hace un sonido genérico.";
+    }
+}
+
+class Perro extends Animal {
+    public function hacerSonido() {
+        echo "El perro ladra.";
+    }
+}
+
+class Gato extends Animal {
+    public function hacerSonido() {
+        echo "El gato maulla.";
+    }
+}
+
+// Crear instancias de las clases
+$animal = new Animal();
+$perro = new Perro();
+$gato = new Gato();
+
+// Llamar al método hacerSonido() en diferentes objetos
+$animal->hacerSonido(); // Salida: El animal hace un sonido genérico.
+$perro->hacerSonido(); // Salida: El perro ladra.
+$gato->hacerSonido(); // Salida: El gato maulla.
+```
+
+En este ejemplo, las clases Perro y Gato heredan de la clase base Animal y proporcionan su propia implementación del método hacerSonido(). Al llamar a este método en los objetos $animal, $perro y $gato, el resultado será diferente según la clase a la que pertenezca el objeto.
+
+El polimorfismo permite tratar a los objetos Perro y Gato como objetos Animal, lo que significa que se pueden utilizar en contextos donde se espera un objeto Animal, como en una función que acepta parámetros de tipo Animal. Esto proporciona flexibilidad y extensibilidad en el diseño de clases y permite escribir código más genérico y fácil de mantener.

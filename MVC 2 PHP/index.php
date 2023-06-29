@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <style>
         h1 {
             text-align: center;
@@ -19,7 +18,7 @@
     <?php
     // Importamos nuestro controlador
     // Debemos tratar todas las rutas (de la vista, modelo y controlador) tomando el index como raiz
-    require_once "controller/Usuarios.php";
+    require_once "controller/Productos.php";
     ?>
 </body>
 
